@@ -34,7 +34,7 @@
 
 - **框架**: Taro 4.x + React 18
 - **语言**: TypeScript
-- **样式**: SCSS + CSS Modules
+- **样式**: CSS + CSS Modules + CSS Variables
 - **状态管理**: Zustand
 - **图表**: ECharts
 - **UI组件**: NutUI (部分)
@@ -46,42 +46,45 @@ src/
 ├── pages/
 │   ├── home/
 │   │   ├── index.tsx           # 今日任务页面
-│   │   ├── index.scss          # 页面样式
+│   │   ├── index.module.css    # 页面样式
 │   │   └── index.config.ts     # 页面配置
 │   ├── tasks/
 │   │   ├── index.tsx           # 任务管理 & 番茄钟页面
-│   │   ├── index.scss
+│   │   ├── index.module.css
 │   │   └── index.config.ts
 │   ├── quantify/
 │   │   ├── index.tsx           # 任务量化页面
-│   │   ├── index.scss
+│   │   ├── index.module.css
 │   │   └── index.config.ts
 │   └── stats/
 │       ├── index.tsx           # 数据统计页面
-│       ├── index.scss
+│       ├── index.module.css
 │       └── index.config.ts
 ├── router/
 │   ├── index.ts                # 路由配置入口
 │   ├── routes.ts               # 路由定义
 │   ├── navigation.ts           # 导航控制函数
-│   └── guards.ts               # 路由守卫（如需要）
+│   └── guards.ts               # 路由守卫
 ├── components/
 │   ├── StatCard/
 │   │   ├── index.tsx           # 统计卡片组件
-│   │   └── index.scss
+│   │   └── index.module.css
 │   ├── TaskCard/
 │   │   ├── index.tsx           # 任务卡片组件
-│   │   └── index.scss
+│   │   └── TaskCard.module.css
+│   ├── TaskForm/
+│   │   ├── index.tsx           # 任务表单组件
+│   │   └── index.module.css
 │   ├── PomodoroTimer/
 │   │   ├── index.tsx           # 番茄钟计时器
-│   │   └── index.scss
+│   │   └── index.module.css
 │   ├── Charts/
 │   │   ├── TrendChart.tsx      # 趋势图表
 │   │   ├── PieChart.tsx        # 饼图
-│   │   └── index.scss
+│   │   └── index.module.css
 │   └── Navigation/
-│       ├── TabBar.tsx          # 底部标签栏
-│       └── index.scss
+│       ├── index.tsx           # 导航组件
+│       └── index.module.css
 ├── store/
 │   ├── index.ts                # store入口文件
 │   ├── taskStore.ts            # 任务状态管理
@@ -106,10 +109,10 @@ src/
 │   ├── stats.ts                # 统计相关类型
 │   └── router.ts               # 路由相关类型
 ├── styles/
-│   ├── variables.scss          # SCSS变量
-│   └── mixins.scss             # SCSS混入
+│   ├── variables.css           # CSS变量
+│   └── mixins.css              # CSS工具类
 ├── app.tsx                     # 应用入口
-├── app.scss                    # 全局样式
+├── app.css                     # 全局样式
 └── app.config.ts               # 应用配置
 ```
 
@@ -201,7 +204,9 @@ pnpm build:alipay
 - 使用TypeScript进行类型安全开发
 - 遵循ESLint和Prettier代码规范
 - 组件采用函数式组件 + Hooks
-- 样式使用SCSS + BEM命名规范
+- 样式使用CSS Modules + CSS Variables + BEM命名规范
+- 使用自定义Hooks封装业务逻辑
+- 通过Services层处理API调用和数据操作
 
 ## 许可证
 
