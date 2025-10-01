@@ -1,0 +1,166 @@
+/* StatCard组件 CSS Modules 样式 */
+
+.statCard {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+  transition: var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.statCard::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--primary);
+  transition: var(--transition-base);
+}
+
+.statCardClickable {
+  cursor: pointer;
+}
+
+.statCardClickable:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.statCardPrimary::before {
+  background-color: var(--primary);
+}
+
+.statCardSuccess::before {
+  background-color: var(--success);
+}
+
+.statCardWarning::before {
+  background-color: var(--warning);
+}
+
+.statCardDanger::before {
+  background-color: var(--danger);
+}
+
+.statCardInfo::before {
+  background-color: var(--info);
+}
+
+.statCardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--border-radius);
+  background-color: color-mix(in srgb, var(--primary) 10%, transparent);
+  margin-right: var(--spacing-md);
+}
+
+.statCardIcon .iconfont {
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.statCardSuccess .statCardIcon {
+  background-color: color-mix(in srgb, var(--success) 10%, transparent);
+}
+
+.statCardSuccess .statCardIcon .iconfont {
+  color: var(--success);
+}
+
+.statCardWarning .statCardIcon {
+  background-color: color-mix(in srgb, var(--warning) 10%, transparent);
+}
+
+.statCardWarning .statCardIcon .iconfont {
+  color: var(--warning);
+}
+
+.statCardDanger .statCardIcon {
+  background-color: color-mix(in srgb, var(--danger) 10%, transparent);
+}
+
+.statCardDanger .statCardIcon .iconfont {
+  color: var(--danger);
+}
+
+.statCardInfo .statCardIcon {
+  background-color: color-mix(in srgb, var(--info) 10%, transparent);
+}
+
+.statCardInfo .statCardIcon .iconfont {
+  color: var(--info);
+}
+
+.statCardContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.statCardValue {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-xs);
+}
+
+.statCardLabel {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+.statCardTrend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--spacing-xs);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.statCardTrend .iconfont {
+  margin-right: var(--spacing-xs);
+  font-size: var(--font-size-xs);
+}
+
+.statCardTrendPositive {
+  color: var(--success);
+}
+
+.statCardTrendNegative {
+  color: var(--danger);
+}
+
+.statCardTrendValue {
+  font-weight: var(--font-weight-semibold);
+}
+
+/* 响应式调整 */
+@media (min-width: 576px) {
+  .statCardValue {
+    font-size: var(--font-size-xxxl);
+  }
+  
+  .statCardIcon {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .statCardIcon .iconfont {
+    font-size: 28px;
+  }
+}

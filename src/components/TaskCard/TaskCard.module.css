@@ -1,0 +1,336 @@
+/* TaskCard CSS Modules 样式 */
+
+.card {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow);
+  margin-bottom: var(--spacing-md);
+  transition: var(--transition-base);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* 状态变体 */
+.cardTodo {
+  border-left: 4px solid var(--status-todo-text);
+}
+
+.cardInProgress {
+  border-left: 4px solid var(--status-in-progress-text);
+}
+
+.cardCompleted {
+  border-left: 4px solid var(--status-completed-text);
+  opacity: 0.8;
+}
+
+/* 优先级变体 */
+.cardPriorityLow {
+  border-top: 2px solid var(--success);
+}
+
+.cardPriorityMedium {
+  border-top: 2px solid var(--warning);
+}
+
+.cardPriorityHigh {
+  border-top: 2px solid var(--danger);
+}
+
+.cardPriorityUrgent {
+  border-top: 3px solid var(--danger);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--danger) 20%, transparent), var(--shadow);
+}
+
+.cardClickable {
+  cursor: pointer;
+}
+
+.cardClickable:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-sm);
+}
+
+.titleSection {
+  flex: 1;
+}
+
+.title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meta {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-xl);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  background-color: var(--gray-200);
+  color: var(--text-secondary);
+}
+
+.statusTodo {
+  background-color: var(--status-todo);
+  color: var(--status-todo-text);
+}
+
+.statusInProgress {
+  background-color: var(--status-in-progress);
+  color: var(--status-in-progress-text);
+}
+
+.statusCompleted {
+  background-color: var(--status-completed);
+  color: var(--status-completed-text);
+}
+
+.priority {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-xl);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  background-color: var(--gray-200);
+  color: var(--text-secondary);
+}
+
+.priorityLow {
+  background-color: color-mix(in srgb, var(--success) 10%, transparent);
+  color: var(--success);
+}
+
+.priorityMedium {
+  background-color: color-mix(in srgb, var(--warning) 10%, transparent);
+  color: var(--warning);
+}
+
+.priorityHigh {
+  background-color: color-mix(in srgb, var(--danger) 10%, transparent);
+  color: var(--danger);
+}
+
+.priorityUrgent {
+  background-color: var(--danger);
+  color: white;
+  animation: pulse 2s infinite;
+}
+
+.category {
+  margin-left: var(--spacing-sm);
+}
+
+.categoryText {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-xl);
+  background-color: var(--gray-100);
+}
+
+.categoryTextWork {
+  background-color: color-mix(in srgb, var(--primary) 10%, transparent);
+  color: var(--primary);
+}
+
+.categoryTextStudy {
+  background-color: color-mix(in srgb, var(--info) 10%, transparent);
+  color: var(--info);
+}
+
+.categoryTextLife {
+  background-color: color-mix(in srgb, var(--success) 10%, transparent);
+  color: var(--success);
+}
+
+.categoryTextOther {
+  background-color: color-mix(in srgb, var(--gray-500) 10%, transparent);
+  color: var(--gray-600);
+}
+
+.description {
+  margin-bottom: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background-color: var(--gray-50);
+  border-radius: var(--border-radius-sm);
+}
+
+.description text {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.progress {
+  margin-bottom: var(--spacing-sm);
+}
+
+.progressInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xs);
+}
+
+.tomatoCount {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.tomatoText {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+.progressPercentage {
+  font-size: var(--font-size-sm);
+  color: var(--primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.progressBar {
+  height: 6px;
+  background-color: var(--gray-200);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.date {
+  flex: 1;
+}
+
+.dateText {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-normal);
+  cursor: pointer;
+  transition: var(--transition-base);
+  text-decoration: none;
+  min-width: auto;
+}
+
+.actionBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.actionBtnPrimary {
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+
+.actionBtnPrimary:hover:not(:disabled) {
+  background-color: color-mix(in srgb, var(--primary) 90%, black);
+}
+
+.actionBtnPrimary:active {
+  background-color: color-mix(in srgb, var(--primary) 85%, black);
+}
+
+.actionBtnSecondary {
+  background-color: var(--gray-200);
+  color: var(--text-primary);
+}
+
+.actionBtnSecondary:hover:not(:disabled) {
+  background-color: color-mix(in srgb, var(--gray-200) 90%, black);
+}
+
+.actionBtnDanger {
+  background-color: var(--danger);
+  color: white;
+}
+
+.actionBtnDanger:hover:not(:disabled) {
+  background-color: color-mix(in srgb, var(--danger) 90%, black);
+}
+
+/* 动画 */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* 响应式调整 */
+@media (min-width: 576px) {
+  .card {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .actions {
+    gap: var(--spacing-sm);
+  }
+  
+  .actionBtn {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+}

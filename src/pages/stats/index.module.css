@@ -1,0 +1,255 @@
+/* Stats页面 CSS Modules 样式 */
+
+.statsPage {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+.statsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  padding: var(--spacing-lg) var(--spacing-md);
+  padding-top: calc(var(--spacing-lg) + env(safe-area-inset-top));
+}
+
+.statsHeaderTitle {
+  flex: 1;
+}
+
+.statsHeaderTitleText {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-xs);
+}
+
+.statsHeaderSubtitle {
+  font-size: var(--font-size-sm);
+  opacity: 0.8;
+}
+
+.statsHeaderFilter {
+  flex-shrink: 0;
+}
+
+.periodPicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-md);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius-xl);
+  cursor: pointer;
+}
+
+.periodPickerText {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: white;
+}
+
+.periodPickerArrow {
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.statsContent {
+  flex: 1;
+  padding: var(--spacing-md);
+}
+
+.statsSectionHeader {
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+.statsSectionTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.statsSectionSubtitle {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.statsOverview {
+  margin-bottom: var(--spacing-xl);
+}
+
+.statsOverviewGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.statsOverviewSecondary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.statsPeriod {
+  margin-bottom: var(--spacing-xl);
+}
+
+.statsPeriodGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.statsCharts {
+  margin-bottom: var(--spacing-xl);
+}
+
+.chartContainer {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow);
+}
+
+.statsAnalysis {
+  margin-bottom: var(--spacing-xl);
+}
+
+.analysisCards {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.analysisCard {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--spacing-md);
+  transition: var(--transition-base);
+}
+
+.analysisCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.analysisCardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  flex-shrink: 0;
+}
+
+.analysisCardIcon .iconfont {
+  font-size: var(--font-size-xl);
+  color: white;
+}
+
+.analysisCardContent {
+  flex: 1;
+}
+
+.analysisCardTitle {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.analysisCardDesc {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* 响应式调整 */
+@media (min-width: 576px) {
+  .statsHeader {
+    padding: var(--spacing-xl) var(--spacing-lg);
+    padding-top: calc(var(--spacing-xl) + env(safe-area-inset-top));
+  }
+  
+  .statsHeaderTitleText {
+    font-size: var(--font-size-xxl);
+  }
+  
+  .statsHeaderSubtitle {
+    font-size: var(--font-size-base);
+  }
+  
+  .statsContent {
+    padding: var(--spacing-lg);
+  }
+  
+  .periodPicker {
+    padding: var(--spacing-sm) var(--spacing-lg);
+  }
+  
+  .periodPickerText {
+    font-size: var(--font-size-base);
+  }
+  
+  .statsSectionTitle {
+    font-size: var(--font-size-xl);
+  }
+  
+  .statsSectionSubtitle {
+    font-size: var(--font-size-base);
+  }
+  
+  .chartContainer {
+    padding: var(--spacing-lg);
+  }
+  
+  .analysisCard {
+    padding: var(--spacing-lg);
+  }
+  
+  .analysisCardIcon {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .analysisCardIcon .iconfont {
+    font-size: var(--font-size-xxl);
+  }
+  
+  .analysisCardTitle {
+    font-size: var(--font-size-lg);
+  }
+  
+  .analysisCardDesc {
+    font-size: var(--font-size-base);
+  }
+}
+
+@media (min-width: 768px) {
+  .statsOverviewGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .statsOverviewSecondary {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .statsPeriodGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .analysisCards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,322 @@
+/* Quantify页面 CSS Modules 样式 */
+
+.quantifyPage {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+.quantifyHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  padding: var(--spacing-lg) var(--spacing-md);
+  padding-top: calc(var(--spacing-lg) + env(safe-area-inset-top));
+}
+
+.quantifyHeaderTitleText {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.quantifyHeaderFilter {
+  flex-shrink: 0;
+}
+
+.periodPicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-md);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius-xl);
+  cursor: pointer;
+}
+
+.periodPickerText {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: white;
+}
+
+.periodPickerArrow {
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.quantifyContent {
+  flex: 1;
+  padding: var(--spacing-md);
+}
+
+.quantifyStats {
+  margin-bottom: var(--spacing-lg);
+}
+
+.quantifyStatsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.quantifyStatsSecondary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.quantifySectionHeader {
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+.quantifySectionTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.quantifySectionSubtitle {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.quantifyTaskList {
+  /* 任务卡片容器 */
+}
+
+.quantifyTaskCard {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow);
+  margin-bottom: var(--spacing-md);
+  transition: var(--transition-base);
+}
+
+.quantifyTaskCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.quantifyTaskCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+}
+
+.quantifyTaskCardTitleSection {
+  flex: 1;
+  margin-right: var(--spacing-md);
+}
+
+.quantifyTaskCardTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.quantifyTaskCardStatus {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-xl);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  background-color: var(--gray-100);
+  color: var(--text-muted);
+}
+
+.quantifyTaskCardStatusCompleted {
+  background-color: var(--status-completed);
+  color: var(--status-completed-text);
+}
+
+.quantifyTaskCardStatusInProgress {
+  background-color: var(--status-in-progress);
+  color: var(--status-in-progress-text);
+}
+
+.quantifyTaskCardStatusTodo {
+  background-color: var(--status-todo);
+  color: var(--status-todo-text);
+}
+
+.quantifyTaskCardCompletion {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.quantifyTaskCardCompletionRate {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary);
+}
+
+.quantifyTaskCardMetrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.quantifyTaskCardProgress {
+  position: relative;
+}
+
+.quantifyMetric {
+  text-align: center;
+}
+
+.quantifyMetricLabel {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.quantifyMetricValue {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+}
+
+.quantifyMetricValuePositive {
+  color: var(--accent);
+}
+
+.quantifyMetricValueNegative {
+  color: var(--success);
+}
+
+.quantifyProgressBar {
+  height: 8px;
+  background-color: var(--gray-200);
+  border-radius: 4px;
+  overflow: visible;
+  position: relative;
+  margin-bottom: var(--spacing-xs);
+}
+
+.quantifyProgressFill {
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.quantifyProgressOverflow {
+  height: 100%;
+  background-color: var(--accent);
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  transition: width 0.3s ease;
+}
+
+.quantifyDeviation {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+}
+
+.quantifyDeviationOver {
+  color: var(--accent);
+}
+
+.quantifyDeviationUnder {
+  color: var(--warning);
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xxl);
+  text-align: center;
+  min-height: 200px;
+}
+
+.emptyStateIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--gray-100);
+  margin-bottom: var(--spacing-lg);
+}
+
+.emptyStateIcon .iconfont {
+  font-size: 2rem;
+  color: var(--text-muted);
+}
+
+.emptyStateText {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+}
+
+/* 响应式调整 */
+@media (min-width: 576px) {
+  .quantifyHeader {
+    padding: var(--spacing-xl) var(--spacing-lg);
+    padding-top: calc(var(--spacing-xl) + env(safe-area-inset-top));
+  }
+  
+  .quantifyHeaderTitleText {
+    font-size: var(--font-size-xxl);
+  }
+  
+  .quantifyContent {
+    padding: var(--spacing-lg);
+  }
+  
+  .periodPicker {
+    padding: var(--spacing-sm) var(--spacing-lg);
+  }
+  
+  .periodPickerText {
+    font-size: var(--font-size-base);
+  }
+  
+  .quantifyTaskCardTitle {
+    font-size: var(--font-size-xl);
+  }
+  
+  .quantifyTaskCardCompletionRate {
+    font-size: var(--font-size-xxxl);
+  }
+  
+  .quantifyTaskCardMetrics {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .quantifyMetricLabel {
+    font-size: var(--font-size-sm);
+  }
+  
+  .quantifyMetricValue {
+    font-size: var(--font-size-lg);
+  }
+}
+
+@media (min-width: 768px) {
+  .quantifyStatsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

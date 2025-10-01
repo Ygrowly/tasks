@@ -1,0 +1,259 @@
+/* TaskForm组件 CSS Modules 样式 */
+
+.taskForm {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.taskFormHeader {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.taskFormTitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+}
+
+.taskFormContent {
+  margin-bottom: var(--spacing-lg);
+}
+
+.formGroup {
+  margin-bottom: var(--spacing-md);
+}
+
+.formGroupHalf {
+  flex: 1;
+}
+
+.formRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+}
+
+.formLabel {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.formRequired {
+  color: var(--danger);
+}
+
+.formInput {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  background-color: var(--bg-secondary);
+  transition: var(--transition-base);
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
+.formInput::placeholder {
+  color: var(--text-muted);
+}
+
+.formInput:disabled {
+  background-color: var(--gray-100);
+  cursor: not-allowed;
+}
+
+.formInputError {
+  border-color: var(--danger);
+}
+
+.formInputError:focus {
+  border-color: var(--danger);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--danger) 20%, transparent);
+}
+
+.formTextarea {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  background-color: var(--bg-secondary);
+  transition: var(--transition-base);
+  min-height: 80px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.formTextarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
+.formTextarea::placeholder {
+  color: var(--text-muted);
+}
+
+.formTextarea:disabled {
+  background-color: var(--gray-100);
+  cursor: not-allowed;
+}
+
+.formPicker {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  background-color: var(--bg-secondary);
+  transition: var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.formPicker:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
+.formPicker::placeholder {
+  color: var(--text-muted);
+}
+
+.formPicker:disabled {
+  background-color: var(--gray-100);
+  cursor: not-allowed;
+}
+
+.formPickerError {
+  border-color: var(--danger);
+}
+
+.formPickerText {
+  flex: 1;
+  color: var(--text-primary);
+}
+
+.formPickerTextLow {
+  color: var(--priority-low);
+}
+
+.formPickerTextMedium {
+  color: var(--priority-medium);
+}
+
+.formPickerTextHigh {
+  color: var(--priority-high);
+}
+
+.formPickerTextUrgent {
+  color: var(--priority-urgent);
+  font-weight: var(--font-weight-semibold);
+}
+
+.formPickerArrow {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  margin-left: var(--spacing-sm);
+}
+
+.formError {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--danger);
+  margin-top: var(--spacing-xs);
+}
+
+.taskFormActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+}
+
+.taskFormBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  cursor: pointer;
+  transition: var(--transition-base);
+  text-decoration: none;
+  flex: 1;
+}
+
+.taskFormBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.taskFormBtnCancel {
+  background-color: var(--gray-200);
+  color: var(--text-primary);
+}
+
+.taskFormBtnCancel:hover:not(:disabled) {
+  background-color: color-mix(in srgb, var(--gray-200) 90%, black);
+}
+
+.taskFormBtnSubmit {
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+
+.taskFormBtnSubmit:hover:not(:disabled) {
+  background-color: color-mix(in srgb, var(--primary) 90%, black);
+}
+
+.taskFormBtnSubmit:active {
+  background-color: color-mix(in srgb, var(--primary) 85%, black);
+}
+
+/* 响应式调整 */
+@media (min-width: 576px) {
+  .taskForm {
+    padding: var(--spacing-xl);
+  }
+  
+  .formRow {
+    gap: var(--spacing-lg);
+  }
+  
+  .taskFormActions {
+    gap: var(--spacing-lg);
+  }
+  
+  .taskFormBtn {
+    padding: var(--spacing-lg) var(--spacing-xl);
+  }
+}

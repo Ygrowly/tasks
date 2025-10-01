@@ -1,0 +1,284 @@
+/* Home页面 CSS Modules 样式 */
+
+.homePage {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+.homeHeader {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  padding: var(--spacing-lg) var(--spacing-md);
+  padding-top: calc(var(--spacing-lg) + env(safe-area-inset-top));
+}
+
+.homeHeaderDate {
+  margin-bottom: var(--spacing-sm);
+}
+
+.homeHeaderDateText {
+  display: block;
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-xs);
+}
+
+.homeHeaderDateFull {
+  font-size: var(--font-size-sm);
+  opacity: 0.8;
+  font-weight: var(--font-weight-medium);
+}
+
+.homeHeaderGreeting {
+  margin-top: var(--spacing-md);
+}
+
+.homeHeaderGreetingText {
+  font-size: var(--font-size-base);
+  opacity: 0.9;
+  font-weight: var(--font-weight-medium);
+}
+
+.homeContent {
+  flex: 1;
+  padding: var(--spacing-md);
+}
+
+.homeStats {
+  margin-bottom: var(--spacing-lg);
+}
+
+.homeStatsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.homeSectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+}
+
+.homeSectionTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+}
+
+.homeSectionAction {
+  font-size: var(--font-size-sm);
+  color: var(--primary);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+}
+
+.homeSectionAction:hover {
+  color: color-mix(in srgb, var(--primary) 90%, black);
+}
+
+.homeQuickStart {
+  margin-bottom: var(--spacing-lg);
+}
+
+.quickStartCard {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.quickStartCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.quickStartCardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  margin-right: var(--spacing-md);
+}
+
+.quickStartCardIcon .iconfont {
+  font-size: var(--font-size-xl);
+  color: white;
+}
+
+.quickStartCardContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.quickStartCardTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.quickStartCardSubtitle {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+.quickStartCardArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--gray-100);
+}
+
+.quickStartCardArrow .iconfont {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.homeTasksList {
+  /* TaskCard 组件自带样式 */
+}
+
+.homeTasksMore {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: var(--transition-base);
+  margin-top: var(--spacing-md);
+}
+
+.homeTasksMore:hover {
+  background-color: var(--gray-50);
+}
+
+.homeTasksMoreText {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+.homeTasksMore .iconfont {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+}
+
+.emptyState {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  background-color: var(--gray-50);
+}
+
+.emptyStateText {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.emptyStateLink {
+  font-size: var(--font-size-base);
+  color: var(--primary);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+}
+
+.emptyStateLink:hover {
+  color: color-mix(in srgb, var(--primary) 90%, black);
+}
+
+.timerModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-index-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timerModalBackdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.timerModalContent {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  max-width: 500px;
+  margin: var(--spacing-md);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* 动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 响应式调整 */
+@media (min-width: 576px) {
+  .homeHeader {
+    padding: var(--spacing-xl) var(--spacing-lg);
+    padding-top: calc(var(--spacing-xl) + env(safe-area-inset-top));
+  }
+  
+  .homeHeaderDateText {
+    font-size: 2.5rem;
+  }
+  
+  .homeHeaderGreetingText {
+    font-size: var(--font-size-lg);
+  }
+  
+  .homeContent {
+    padding: var(--spacing-lg);
+  }
+  
+  .quickStartCardSubtitle {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .homeStatsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

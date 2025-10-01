@@ -1,0 +1,120 @@
+/* CSS 自定义属性 - 设计系统变量 */
+:root {
+  /* 主题色彩 */
+  --primary: #4a6fa5;
+  --secondary: #6b8cbc;
+  --accent: #ff6b6b;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --info: #17a2b8;
+
+  /* 灰度色彩 */
+  --gray-50: #fafafa;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+
+  /* 背景色 */
+  --bg-primary: #f5f7fb;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+
+  /* 文字颜色 */
+  --text-primary: var(--dark);
+  --text-secondary: var(--gray-600);
+  --text-muted: var(--gray-500);
+  --text-light: #ffffff;
+
+  /* 边框 */
+  --border-color: var(--gray-200);
+  --border-radius: 8px;
+  --border-radius-sm: 4px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 15px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+  /* 间距 */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+
+  /* 字体大小 */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-xxl: 24px;
+  --font-size-xxxl: 32px;
+
+  /* 字体粗细 */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* 行高 */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.6;
+
+  /* 断点 */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+
+  /* Z-index */
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal-backdrop: 1040;
+  --z-index-modal: 1050;
+  --z-index-popover: 1060;
+  --z-index-tooltip: 1070;
+
+  /* 动画 */
+  --transition-base: all 0.3s ease;
+  --transition-fast: all 0.15s ease;
+  --transition-slow: all 0.5s ease;
+
+  /* 状态颜色 */
+  --status-todo: #fff3cd;
+  --status-todo-text: #856404;
+  --status-in-progress: #d1ecf1;
+  --status-in-progress-text: #0c5460;
+  --status-completed: #d4edda;
+  --status-completed-text: #155724;
+  --status-cancelled: #f8d7da;
+  --status-cancelled-text: #721c24;
+
+  /* 优先级颜色 */
+  --priority-low: var(--success);
+  --priority-medium: var(--warning);
+  --priority-high: var(--accent);
+  --priority-urgent: var(--danger);
+
+  /* 分类颜色 */
+  --category-work: var(--primary);
+  --category-study: var(--info);
+  --category-life: var(--success);
+  --category-other: var(--gray-500);
+}

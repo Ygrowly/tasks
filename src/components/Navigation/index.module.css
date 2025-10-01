@@ -1,0 +1,95 @@
+/* Navigation组件 CSS Modules 样式 */
+
+.navigation {
+  background-color: white;
+  border-top: 1px solid var(--border-color);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.navigationList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  padding: var(--spacing-sm) 0;
+}
+
+.navigationItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  cursor: pointer;
+  transition: var(--transition-base);
+  border-radius: var(--border-radius);
+  min-width: 60px;
+}
+
+.navigationItem:hover {
+  background-color: var(--gray-100);
+}
+
+.navigationItemActive .navigationIcon {
+  background-color: var(--primary);
+}
+
+.navigationItemActive .navigationIcon .iconfont {
+  color: white;
+}
+
+.navigationItemActive .navigationTitle {
+  color: var(--primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.navigationIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--gray-100);
+  margin-bottom: var(--spacing-xs);
+  transition: var(--transition-base);
+}
+
+.navigationIcon .iconfont {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  transition: var(--transition-base);
+}
+
+.navigationTitle {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  text-align: center;
+  transition: var(--transition-base);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 60px;
+}
+
+/* 响应式调整 */
+@media (min-width: 576px) {
+  .navigationItem {
+    padding: var(--spacing-sm) var(--spacing-md);
+    min-width: 80px;
+  }
+  
+  .navigationIcon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .navigationIcon .iconfont {
+    font-size: var(--font-size-xl);
+  }
+  
+  .navigationTitle {
+    font-size: var(--font-size-sm);
+    max-width: 80px;
+  }
+}

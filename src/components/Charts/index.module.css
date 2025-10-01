@@ -1,0 +1,67 @@
+/* Charts组件 CSS Modules 样式 */
+
+.trendChart,
+.pieChart {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow);
+  
+  /* 图表容器样式 */
+}
+
+.trendChart canvas,
+.pieChart canvas {
+  display: block;
+  max-width: 100%;
+}
+
+/* 图表加载状态 */
+.chartLoading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+}
+
+/* 图表空状态 */
+.chartEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: var(--text-muted);
+}
+
+.chartEmptyIcon {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.chartEmptyText {
+  font-size: var(--font-size-sm);
+}
+
+/* 图表标题 */
+.chartTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+/* 响应式调整 */
+@media (min-width: 576px) {
+  .trendChart,
+  .pieChart {
+    padding: var(--spacing-lg);
+  }
+  
+  .chartTitle {
+    font-size: var(--font-size-xl);
+  }
+}
