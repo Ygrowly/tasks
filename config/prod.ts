@@ -3,8 +3,9 @@ import type { UserConfigExport } from "@tarojs/cli"
 export default {
   mini: {},
   h5: {
-    // 确保产物为 es5
-    legacy: true,
+    // 暂时禁用legacy插件来避免Babel目标解析问题
+    // 如果需要支持老旧浏览器，可以后续重新启用并正确配置
+    legacy: false,
     /**
      * WebpackChain 插件配置
      * @docs https://github.com/neutrinojs/webpack-chain

@@ -84,7 +84,8 @@ export default defineConfig<'vite'>(async (merge, { command, mode }) => {
     }
   }
 
-  process.env.BROWSERSLIST_ENV = process.env.NODE_ENV
+  // 移除有问题的BROWSERSLIST_ENV设置，让browserslist自动根据NODE_ENV选择配置
+  // process.env.BROWSERSLIST_ENV = process.env.NODE_ENV
 
   if (process.env.NODE_ENV === 'development') {
     // 本地开发构建配置（不混淆压缩）
